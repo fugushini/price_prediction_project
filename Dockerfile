@@ -16,3 +16,7 @@ RUN pip3 install -r requirements.txt
 COPY . /app
 
 CMD ["python3", "server.py"]
+
+#docker build -t titanic-service:latest .   
+
+#docker run -d --name titanic-service -p 500:5000 titanic-service:latest

@@ -1,8 +1,12 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import util
 app = Flask(__name__)
 CORS(app)
+
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('app.html')
 
 @app.route("/get_location_names", methods=['GET'])
 def get_location_names():
@@ -42,4 +46,4 @@ def predict_home_price():
 if __name__ == "__main__":
     print("Starting Python Flask server for Home Price Predictions...")
     util.load_saved_artifacts()
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="127.0.0.1", port=5000)
