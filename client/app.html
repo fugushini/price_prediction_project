@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banglore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Площадь</h2>
+    <input class="area"  type="text" id="uiSquare_total" class="floatLabel" name="Square_total" value="10">
+    <h2>Площадь кухни</h2>
+    <input class="area"  type="text" id="uiSquare_kitchen" class="floatLabel" name="Square_kitchen" value="10">
+    <h2>Количество комнат</h2>
+    <input class="area"  type="text" id="uiRooms" class="intLabel" name="Rooms" value="1">
+    <h2>Этаж</h2>
+    <input class="area"  type="text" id="uiLevel" class="intLabel" name="Level" value="1">
+    <h2>Этажей в доме</h2>
+    <input class="area"  type="text" id="uiLevels" class="intLabel" name="Levels" value="1">
+	<h2>Тип здания</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bt-1" name="uiBuildingType" value="0"/>
+		<label for="radio-bt-1">Другие</label>
+		<input type="radio" id="radio-bt-2" name="uiBuildingType" value="1" checked/>
+		<label for="radio-bt-2">Панельный</label>
+		<input type="radio" id="radio-bt-3" name="uiBuildingType" value="2"/>
+		<label for="radio-bt-3">Монолит</label>
+		<input type="radio" id="radio-bt-4" name="uiBuildingType" value="3"/>
+		<label for="radio-bt-4">Кирпичный</label>
+		<input type="radio" id="radio-bt-5" name="uiBuildingType" value="4"/>
+		<label for="radio-bt-5">Блочный</label>
+        <input type="radio" id="radio-bt-6" name="uiBuildingType" value="5"/>
+		<label for="radio-bt-6">Деревянный</label>
+	</div>
+	</form>
+<form class="form">
+	<h2>Вторичка или новострой</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-ObType-1" name="uiObType" value="1" checked/>
+		<label for="radio-ObType-1">Вторичка</label>
+		<input type="radio" id="radio-ObType-2" name="uiObType" value="2"/>
+		<label for="radio-ObType-2">Новострой</label>
+	
+	</div>
+		<h2>Регион</h2>
+	<div>
+  <select class="location" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected>Выберите регион</option>
+
+  </select>
+</div>
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+</body>
+</html>

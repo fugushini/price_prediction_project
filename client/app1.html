@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<title>Оценка стоимости недвижимости</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+
+<h1>Оценка стоимости недвижимости</h1>
+
+<form>
+
+  <fieldset>
+    <legend>Тип здания</legend>
+    <label><input type="radio" name="uiBuildingType" value="0" /> Кирпичный</label><br />
+    <label><input type="radio" name="uiBuildingType" value="1" /> Монолитный</label><br />
+    <label><input type="radio" name="uiBuildingType" value="2" /> Панельный</label><br />
+  </fieldset>
+
+  <fieldset>
+    <legend>Тип объекта</legend>
+    <label><input type="radio" name="uiObType" value="0" /> Квартира</label><br />
+    <label><input type="radio" name="uiObType" value="1" /> Дом</label><br />
+    <label><input type="radio" name="uiObType" value="2" /> Таунхаус</label><br />
+  </fieldset>
+
+  <label for="uiSquare_total">Общая площадь (м²):</label><br />
+  <input type="number" id="uiSquare_total" step="0.1" /><br /><br />
+
+  <label for="uiRooms">Количество комнат:</label><br />
+  <input type="number" id="uiRooms" min="1" /><br /><br />
+
+  <label for="uiLevel">Этаж:</label><br />
+  <input type="number" id="uiLevel" min="1" /><br /><br />
+
+  <label for="uiLevels">Этажность здания:</label><br />
+  <input type="number" id="uiLevels" min="1" /><br /><br />
+
+  <label for="uiSquare_kitchen">Площадь кухни (м²):</label><br />
+  <input type="number" id="uiSquare_kitchen" step="0.1" /><br /><br />
+
+  <label for="uiLocations">Регион:</label><br />
+  <select id="uiLocations">
+    <!-- варианты подгружаются скриптом onPageLoad -->
+  </select><br /><br />
+
+  <button type="button" onclick="onClickedEstimatePrice()">Оценить стоимость</button>
+</form>
+
+<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+  <!-- Здесь появится оценка стоимости после нажатия кнопки -->
+</div>
+
+
+</body>
+</html>

@@ -17,6 +17,6 @@ COPY . /app
 
 CMD ["python3", "server.py"]
 
-#docker build -t titanic-service:latest .   
+#docker build -t server-service:latest .   
 
-#docker run -d --name titanic-service -p 500:5000 titanic-service:latest
+#docker run -d --name server-service -p 500:5000 server-service:latest
