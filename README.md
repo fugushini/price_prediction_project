@@ -10,7 +10,7 @@
    - Включает описание данных.
 
 2. **`client/`**:
-   - Хранит хранит frontend проекта js+html+css.
+   - Хранит frontend проекта js+html+css.
 
 3. **`server/`**:
    - Хранит backend проекта flask и вспомогательные методы в util.
